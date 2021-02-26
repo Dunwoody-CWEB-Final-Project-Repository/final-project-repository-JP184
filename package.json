@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Dunwoody-CWEB-Final-Project-Repository/final-project-repository-JP184/issues"
   },
-  "homepage": "https://github.com/Dunwoody-CWEB-Final-Project-Repository/final-project-repository-JP184#readme"
+  "homepage": "https://github.com/Dunwoody-CWEB-Final-Project-Repository/final-project-repository-JP184#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
