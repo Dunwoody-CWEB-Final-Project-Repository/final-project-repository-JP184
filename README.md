@@ -21,3 +21,16 @@ Listed below are project check-in dates. Think of these as sanity checks to make
 - [ ] Database: Week 11
 - [ ] Middleware: Week 13
 - [ ] Hosting: Week 15
+
+## Current Technologies
+
+Listed below are the current frameworks/libraries and softwares used.
+
+* Node.js - Runtime Service, Modulation with NPM.
+* Express.js - Routing system with node.js and provides serverside logic.
+* React? - Maybe. Will be used for component based structuring.
+* PHP? - Fallback language and systems.
+* MySQL - Maybe.
+* NoSQL Languages - ? Maybe
+* HTML/CSS - Front end works.
+* Javascript - Fill in key gaps for web app.
