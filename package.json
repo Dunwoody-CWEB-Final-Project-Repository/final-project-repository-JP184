@@ -1,0 +1,27 @@
+{
+  "name": "consortium",
+  "version": "1.0.0",
+  "description": "Writers web",
+  "main": "index.js",
+  "scripts": {
+    "start": "node run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dunwoody-CWEB-Final-Project-Repository/final-project-repository-JP184.git"
+  },
+  "author": "Randy Chan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dunwoody-CWEB-Final-Project-Repository/final-project-repository-JP184/issues"
+  },
+  "homepage": "https://github.com/Dunwoody-CWEB-Final-Project-Repository/final-project-repository-JP184#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node": "^15.8.0",
+    "uniq": "^1.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
