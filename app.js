@@ -1,30 +1,17 @@
-const http = require('http');
 const express = require('express');
 const app = express();
-const port = 3000;
+const path = require("path");
+// const routes = require('./routes');
 
-app.use(express.static('assets'));
+app.set("port", process.env.PORT || 3000); // Sets port.
 
-app.get('/', (req, res) => res.send('Hello World!'));
+app.set("views", path.join(__dirname, "views")); // Where to find our views.
+app.set("view engine", "ejs"); // Sets viewengine to use EJS.
 
-app.listen(port, () => console.log("Example app listening on port ${port}!"));
+app.use("/", require("./routes/web")); // Access web routes.
+app.use("/api", require("./routes/api")); // Access api routes.
+app.use(express.static(__dirname + "/public")); // To be able to access any files in our public folder.
 
-app.get('/', function (req, res){
-    res.send('App Get sent!');
-    res.end();
-});
-
-app.post('/', function(req, res){
-    res.send('Got post request!');
-    res.end();
-});
-
-app.put('/user', function(req, res){
-    res.send('Got a put request at /user!');
-    res.end();
-});
-
-app.delete('/user', function(req, res){
-    res.send('Got a delete request at /user');
-    res.end();
-});
+app.listen(app.get('port'), function(){
+    console.log("Server started on port " + app.get("port"));
+}); // Runs to detect what port the server is running on.
