@@ -28,13 +28,9 @@ Listed below are the current frameworks/libraries and softwares used.
 
 * Node.js - Runtime Service, Modulation with NPM.
 * Express.js - Routing system with node.js and provides serverside logic.
-* HTML/CSS - Front end works.
-* Javascript - Fill in key gaps for web app.
-* EJS - View engine, used to compile partial views and other views together to make complete web pages.
-* Nodemon - Able to view scripts without the need of constantly manually restarting application.
-
-## Considered Technologies
 * React? - Maybe. Will be used for component based structuring.
 * PHP? - Fallback language and systems.
 * MySQL - Maybe.
 * NoSQL Languages - ? Maybe
+* HTML/CSS - Front end works.
+* Javascript - Fill in key gaps for web app.

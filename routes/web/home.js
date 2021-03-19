@@ -18,4 +18,14 @@ router.get("/about", function(req, res){
     console.log("About");
     res.render("home/about")
 })
+
+router.get("/login", function(req, res){
+    console.log("Login");
+    res.render("home/login")
+})
+
+router.get("/signup", function(req, res){
+    console.log("Signup");
+    res.render("home/signup")
+})
 module.exports = router;
