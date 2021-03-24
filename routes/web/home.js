@@ -35,4 +35,9 @@ router.get("/support", function( req, res){
     console.log("Support");
     res.render("home/Support");
 });
+
+router.get("/whoareyou", function( req, res){
+    console.log("Who Are You");
+    res.render("home/whoareyou");
+});
 module.exports = router;
