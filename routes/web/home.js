@@ -33,7 +33,7 @@ router.get("/contact", function( req, res){
 
 router.get("/support", function( req, res){
     console.log("Support");
-    res.render("home/Support");
+    res.render("home/support");
 });
 
 router.get("/whoareyou", function( req, res){
