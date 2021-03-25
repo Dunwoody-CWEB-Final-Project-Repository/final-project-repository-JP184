@@ -40,4 +40,9 @@ router.get("/whoareyou", function( req, res){
     console.log("Who Are You");
     res.render("home/whoareyou");
 });
+
+router.get("/features", function( req, res){
+    console.log("Features");
+    res.render("home/features");
+});
 module.exports = router;
