@@ -1,4 +1,4 @@
-dconst express = require("express");
+const express = require("express");
 const router = express.Router();
 //Index route
 router.get("/", function(req, res){
