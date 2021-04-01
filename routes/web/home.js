@@ -3,7 +3,7 @@ const router = express.Router();
 //Index route
 router.get("/", function(req, res){
     
-    console.log("Index");
+    console.log("Index to Home");
     res.render("home/home");
 });
 router.get("/home", function(req, res){
@@ -38,11 +38,27 @@ router.get("/support", function( req, res){
 
 router.get("/whoareyou", function( req, res){
     console.log("Who Are You");
-    res.render("home/whoareyou");
+    res.render("home/whoareyou.ejs");
+});
+
+router.get("/whoareyou/writer", function( req, res){
+    console.log("wau/writer");
+    res.render("home/whoareyou/writer");
+});
+
+router.get("/whoareyou/worldbuilder", function( req, res){
+    console.log("wau/worldbuilder");
+    res.render("home/whoareyou/worldbuilder");
+});
+
+router.get("/whoareyou/roleplayer", function( req, res){
+    console.log("wau/roleplayer");
+    res.render("home/whoareyou/roleplayer");
 });
 
 router.get("/features", function( req, res){
     console.log("Features");
     res.render("home/features");
 });
+
 module.exports = router;
