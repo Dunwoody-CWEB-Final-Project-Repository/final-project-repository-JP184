@@ -25,7 +25,7 @@ Listed below are project check-in dates. Think of these as sanity checks to make
 
 ## Current Technologies
 
-# Listed below are the current frameworks/libraries and softwares used.
+### Listed below are the current frameworks/libraries and softwares used.
 
 * Node.js - Runtime Service, Modulation with NPM.
 * Express.js - Routing system with node.js and provides serverside logic.
@@ -34,11 +34,9 @@ Listed below are project check-in dates. Think of these as sanity checks to make
 
 ## Considered Technologies
 
-# Listed below are frameworks/libraries that have been considered.
+### Listed below are frameworks/libraries that have been considered.
 
 * React? - Maybe. Will be used for component based structuring. But may have to restructure entire document.
 * PHP? - Fallback language and systems.
 * MySQL - Maybe.
 * NoSQL Languages - ? Maybe
-
-# Test.
