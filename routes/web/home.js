@@ -3,7 +3,7 @@ const router = express.Router();
 //Index route
 router.get("/", function(req, res){
     
-    console.log("Index");
+    console.log("Index to Home");
     res.render("home/home");
 });
 router.get("/home", function(req, res){
