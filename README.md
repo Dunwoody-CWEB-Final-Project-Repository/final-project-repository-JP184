@@ -31,6 +31,8 @@ Listed below are project check-in dates. Think of these as sanity checks to make
 * Express.js - Routing system with node.js and provides serverside logic.
 * HTML/CSS - Front end works.
 * Javascript - Fill in key gaps for web app.
+* Nodemon - Easier development.
+* EJS - Viewport modeling.
 
 ## Considered Technologies
 
@@ -40,3 +42,4 @@ Listed below are project check-in dates. Think of these as sanity checks to make
 * PHP? - Fallback language and systems.
 * MySQL - Maybe.
 * NoSQL Languages - ? Maybe
+* Postgre Herkou DB - Might include this.
