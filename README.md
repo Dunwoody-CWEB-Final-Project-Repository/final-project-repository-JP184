@@ -3,6 +3,7 @@
 This is the repository that will host the code for your final project.  Please update this readme file with the technologies you will be using for your project.  
 
 Also include a description of your project along with instructions on how to replicate your project and where to find your project on the web.
+
 ## Instructor Help
 
 The following instructors are available to help with technical aspects of your project when needed.
@@ -24,13 +25,18 @@ Listed below are project check-in dates. Think of these as sanity checks to make
 
 ## Current Technologies
 
-Listed below are the current frameworks/libraries and softwares used.
+# Listed below are the current frameworks/libraries and softwares used.
 
 * Node.js - Runtime Service, Modulation with NPM.
 * Express.js - Routing system with node.js and provides serverside logic.
-* React? - Maybe. Will be used for component based structuring.
+* HTML/CSS - Front end works.
+* Javascript - Fill in key gaps for web app.
+
+## Considered Technologies
+
+# Listed below are frameworks/libraries that have been considered.
+
+* React? - Maybe. Will be used for component based structuring. But may have to restructure entire document.
 * PHP? - Fallback language and systems.
 * MySQL - Maybe.
 * NoSQL Languages - ? Maybe
-* HTML/CSS - Front end works.
-* Javascript - Fill in key gaps for web app.
