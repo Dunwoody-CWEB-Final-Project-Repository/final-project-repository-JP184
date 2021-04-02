@@ -46,7 +46,7 @@
     padding: 0px !important;
     margin: 0px !important;
 }
-
+/* This sets margin and padding to 0 to force the container to fill the entire parent div. */
 .container-zeroed{
     min-height:97.5vh;
     padding: 0px !important;
@@ -70,7 +70,20 @@
 }
 
 .bg-darkgrey{
-    background: #2c2f31;
+    background-color: #2c2f31 !important;
+}
+
+.bg-offwhite{
+    background-color: #c8c8c8 !important;
+}
+
+#login{
+    background:#EDEDED;
+    height:300px;
+    width:300px;
+    color:black;
+    border-radius: 1em;
+
 }
 
 footer{
@@ -86,6 +99,8 @@ footer{
     border-color: #E25D5D !important;
     font-weight:bolder !important;
 }
+
+/* Sets button to full width 200px. */
 
 .btn-fw{
     width:200px;
