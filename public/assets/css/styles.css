@@ -14,8 +14,12 @@
     height: 97.5vh !important;
 }
 
+.hvh-80{
+    height: 80vh !important;
+}
+
 .landing{
-    min-height:100vh;
+    min-height:97.5vh;
     background-image: url("https://w.wallhaven.cc/full/r7/wallhaven-r77g97.png");
     background-size: cover;
     background-color:black;
@@ -25,9 +29,11 @@
 
 .landing-background{
     background-color: rgba(0, 0, 0, .4);
-    min-height:100vh;
+    min-height:97.5vh;
     min-width:100vh;
     width:100%;
+    padding: 0px !important;
+    margin: 0px !important;
 }
 
 
@@ -36,13 +42,13 @@
     background-color: transparent;
     background-blend-mode: lighten;
     color:white;
+    min-height:97.5vh;
+    padding: 0px !important;
+    margin: 0px !important;
 }
 
 .container-zeroed{
     min-height:97.5vh;
-    background-image: url("https://w.wallhaven.cc/full/r7/wallhaven-r77g97.png");
-    background-size: cover;
-    background-color:black;
     padding: 0px !important;
     margin: 0px !important;
 }
