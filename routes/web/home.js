@@ -17,7 +17,7 @@ router.get("/about", function(req, res){
 
 router.get("/login", function(req, res){
     console.log("Login");
-    res.render("home/login");
+    res.render("home/login.ejs");
 });
 
 router.get("/signup", function(req, res){

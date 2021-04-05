@@ -24,9 +24,9 @@ body {
 
 .landing{
     min-height:97.5vh;
-    background-image: url("https://w.wallhaven.cc/full/r7/wallhaven-r77g97.png");
+    background-image: url(../images/homebackground.png);
     background-size: cover;
-    background-color:black;
+    background-color: #2c2f31;
     padding: 0px !important;
     margin: 0px !important;
 }
@@ -44,7 +44,6 @@ body {
 .landing-content{
     padding-top:35vh;
     background-color: transparent;
-    background-blend-mode: lighten;
     color:white;
     min-height:97.5vh;
     padding: 0px !important;
@@ -81,11 +80,24 @@ body {
     background-color: #c8c8c8 !important;
 }
 
+.text-white{
+    color:white !important;
+}
+
 #login{
     background:#EDEDED;
     height:300px;
     width:300px;
     color:black;
+    border-radius: 1em;
+
+}
+
+#signup{
+    background:#EDEDED;
+    height:400px;
+    width:400px;
+    color:black !important;
     border-radius: 1em;
 
 }
@@ -103,8 +115,6 @@ footer{
     border-color: #E25D5D !important;
     font-weight:bolder !important;
 }
-
-/* Sets button to full width 200px. */
 
 .btn-fw{
     width:200px;

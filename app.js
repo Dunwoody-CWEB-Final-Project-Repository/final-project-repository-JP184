@@ -15,3 +15,8 @@ app.use(express.static(path.join(__dirname + "/public"))) // To be able to acces
 app.listen(app.get('port'), function(){
     console.log("Server started on port " + app.get("port"));
 }); // Runs to detect what port the server is running on.
+
+app.post('/', (req, res) => {
+    console.log(req.body);
+    res.status(201).send('Created User');
+});
