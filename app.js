@@ -3,14 +3,6 @@ const app = express();
 const path = require("path");
 // const routes = require('./routes');
 
-const { Pool } = require('pg');
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false
-  }
-});
-
 app.set("port", process.env.PORT || 3000); // Sets port.
 
 app.set("views", path.join(__dirname, "views")); // Where to find our views.

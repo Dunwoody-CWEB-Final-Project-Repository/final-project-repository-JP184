@@ -6,6 +6,15 @@ router.get("/", function(req, res){
     console.log("Index to Home");
     res.render("home/home");
 });
+
+const { Pool } = require('pg');
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
+
 router.get("/home", function(req, res){
     console.log("Home");
     res.render("home/home");
