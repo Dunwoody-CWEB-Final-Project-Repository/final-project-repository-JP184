@@ -1,5 +1,12 @@
 const express = require("express");
 const router = express.Router();
+const { Pool } = require('pg');
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
 //Index route
 router.get("/", function(req, res){
     
@@ -74,6 +81,6 @@ router.get('/db', async (req, res) => {
       console.error(err);
       res.send("Error " + err);
     }
-  })
+  });
 
 module.exports = router;
