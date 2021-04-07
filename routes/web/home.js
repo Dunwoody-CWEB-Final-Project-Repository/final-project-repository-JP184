@@ -9,7 +9,6 @@ const client = new Client({
   }
 });
 
-
 //Index route
 router.get("/", function(req, res){
     
@@ -72,6 +71,7 @@ router.get("/features", function( req, res){
     res.render("home/features");
 });
 
+router.get("/db", (req, res) => {
 client.connect();
 
 client.query('SELECT * FROM test_table;', (err, res) => {
@@ -81,5 +81,6 @@ client.query('SELECT * FROM test_table;', (err, res) => {
   }
   client.end();
 });
+})
 
 module.exports = router;
