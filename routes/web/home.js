@@ -73,10 +73,9 @@ router.get("/features", function( req, res){
 router.get('/db', async (req, res) => {
     try {
       const client = await pool.connect();
-      const result = await client.query('SELECT * FROM test_table');
+      const result = await client.query('SELECT * FROM all');
       const results = { 'results': (result) ? result.rows : null};
       res.render('home/db', results );
-      console.log(results);
       client.release();
     } catch (err) {
       console.error(err);
