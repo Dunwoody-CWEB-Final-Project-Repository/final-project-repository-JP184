@@ -47,7 +47,7 @@ router.get("/support", function( req, res){
 
 router.get("/whoareyou", function( req, res){
     console.log("Who Are You");
-    res.render("home/whoareyou.ejs");
+    res.render("home/whoareyou");
 });
 
 router.get("/whoareyou/writer", function( req, res){
@@ -75,7 +75,7 @@ router.get('/db', async (req, res) => {
       const client = await pool.connect();
       const result = await client.query('SELECT * FROM test_table');
       const results = { 'results': (result) ? result.rows : null};
-      res.render('pages/db', results );
+      res.render('home/db', results );
       client.release();
     } catch (err) {
       console.error(err);
