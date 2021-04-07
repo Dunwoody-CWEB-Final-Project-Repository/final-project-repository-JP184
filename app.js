@@ -1,16 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require("path");
-const router = express.router();
 // const routes = require('./routes');
-
-const { Pool } = require('pg');
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false
-  }
-});
 
 app.set("port", process.env.PORT || 3000); // Sets port.
 
@@ -30,16 +21,3 @@ app.post('/', (req, res) => {
     res.status(201).send('Created User');
 });
 
-router.get('/db', async (req, res) => {
-    try {
-      const client = await pool.connect();
-      const result = await client.query('SELECT * FROM test_table');
-      const results = { 'results': (result) ? result.rows : null};
-      res.render('home/db', results );
-      console.log('')
-      client.release();
-    } catch (err) {
-      console.error(err);
-      res.send("Error " + err);
-    }
-  });
