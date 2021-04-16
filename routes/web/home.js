@@ -71,13 +71,17 @@ router.get("/features", function( req, res){
     res.render("home/features");
 });
 
-router.get("/db", (req, res) => {
-    pool.query('INSERT INTO test_table(name) VALUES ("Hello Database2")')
-    if (err){
-        console.log(err.stack)
-    } else{
-        console.log(res.rows[0])
+router.get('/db', async (req, res) => {
+    try {
+      const client = await pool.connect();
+      const result = await client.query('SELECT * FROM test_table');
+      const results = { 'results': (result) ? result.rows : null};
+      res.render('pages/db', results );
+      client.release();
+    } catch (err) {
+      console.error(err);
+      res.send("Error " + err);
     }
-})
+  })
 
 module.exports = router;
