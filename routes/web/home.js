@@ -71,17 +71,11 @@ router.get("/features", function( req, res){
     res.render("home/features");
 });
 
-router.get('/db', async (req, res) => {
-    try {
-      const client = await pool.connect();
-      const result = await client.query('SELECT * FROM test_table');
-      const results = { 'results': (result) ? result.rows : null};
-      res.render('home/db', results );
-      client.release();
-    } catch (err) {
-      console.error(err);
-      res.send("Error " + err);
-    }
-  })
+router.get("/db", (req, res) => {
+    pool.query('SELECT NOW()', (err, res) => {
+        console.log(err, res)
+        pool.end()
+    })
+})
 
 module.exports = router;
