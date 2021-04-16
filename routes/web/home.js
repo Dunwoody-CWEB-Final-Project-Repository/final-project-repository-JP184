@@ -72,10 +72,12 @@ router.get("/features", function( req, res){
 });
 
 router.get("/db", (req, res) => {
-    pool.query('SELECT NOW()', (err, res) => {
-        console.log(err, res)
-        pool.end()
-    })
+    pool.query('INSERT INTO test_table(name) VALUES ("Hello Database2")')
+    if (err){
+        console.log(err.stack)
+    } else{
+        console.log(res.rows[0])
+    }
 })
 
 module.exports = router;
