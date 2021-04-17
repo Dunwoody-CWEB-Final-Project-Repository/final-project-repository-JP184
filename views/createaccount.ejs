@@ -1,0 +1,36 @@
+<%- include ("./_partial/_header.ejs") -%>
+
+<div class='container mt-3'>
+    <form method="POST" id='myForm' action='/submit'>
+        <div class='form-group'>
+            <label for='InputUsername'>Email Address</label>
+            <input name='username' type="email" class='form-control' placeholder='Email'>
+        </div>
+        <div class='form-group mt-3'>
+            <label for='InputPassword'>Password</label>
+            <input name='password' type="password" class='form-control' placeholder='Password'>
+            <br>
+            <span class='' id='error'></span>
+        </div>
+        <button type='submit' class='btn btn-lg btn-dark mt-5'>Create Account</button>
+    </form>
+</div>
+
+<script>
+    let username = document.getElementsByName('username')
+    let password = document.getElementsByName('password')
+    let form = document.getElementById('myForm')
+    let error = document.getElementById('error')
+
+    form.addEventListener('submit', (e) => {
+        if (password.length() < 8){
+            error.className = 'alert alert-danger mt-4 mb-5'
+            error.innerHTML = "Your password is less than 8 characters long, please fix."
+            e.preventDefault()
+        } else {
+            return
+        }
+    })
+</script>
+
+<%- include ("./_partial/_footer.ejs") -%>
