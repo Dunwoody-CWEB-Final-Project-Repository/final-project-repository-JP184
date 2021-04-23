@@ -1,0 +1,27 @@
+<%- include('../_partial/_header'); -%>
+ 
+<div class="container-fluid container-zeroed">
+    <div class="container-fluid container-zeroed-background bg-darkgrey">
+        <div class="container-fluid container-zeroed-content hvh-80 d-flex flex-column align-items-center justify-content-center">
+            <div class="flex-item p-4 bg-offwhite" id="login">
+                <form href="#" type="submit" method="POST">
+                    <input type="username" class="form-control bg-darkgrey text-white" id="username" placeholder="Username">
+                    <br>
+                    <input type="password" class="form-control bg-darkgrey text-white" id="password" placeholder="Password">
+                    <br>
+                    <button type="submit" class="btn btn-dark col-12">Log In</button>
+                    <br>
+                    <div class="d-flex justify-content-between">
+                        <div>Remember Me</div>
+                        <div>Need help?</div>
+                    </div>
+                </form>
+            </div>
+            <div class="mt-2">
+                <a href="/signup" class="badge">Create an Account</a> | <a href="#" class="badge">Forgot Password</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../_partial/_footer'); -%>

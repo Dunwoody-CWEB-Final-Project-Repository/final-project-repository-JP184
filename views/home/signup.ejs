@@ -1,0 +1,35 @@
+<%- include('../_partial/_header'); -%>
+
+    <div class="container-fluid container-zeroed">
+        <div class="container-fluid container-zeroed-background bg-darkgrey">
+            <div
+                class="container-fluid container-zeroed-content hvh-80 d-flex flex-column align-items-center justify-content-center">
+                <div class="flex-item p-4 bg-offwhite" id="signup">
+                    <form method="post" id="SignUpForm">
+                        <input type="email" class="form-control bg-darkgrey text-white" name="email"
+                            placeholder="Email">
+                        <br>
+                        <input type="text" class="form-control bg-darkgrey text-white" name="username"
+                            placeholder="Username">
+                        <br>
+                        <input type="password" class="form-control bg-darkgrey text-white" name="password"
+                            placeholder="Password">
+                        <br>
+                        <input type="password" class="form-control bg-darkgrey text-white" name="retypePassword"
+                            placeholder="Retype Password">
+                        <br>
+                        <button type="submit" class="btn btn-dark col-12">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const myForm = document.getElementById('SignUpForm');
+
+        myForm.addEventListener('submit', function (e) {
+        })
+    </script>
+
+    <%- include('../_partial/_footer'); -%>
