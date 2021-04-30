@@ -2,10 +2,10 @@
   "name": "consortium",
   "version": "1.0.0",
   "description": "Writers web",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node app",
-    "dev": "nodemon app"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",

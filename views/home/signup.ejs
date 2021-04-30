@@ -5,19 +5,16 @@
             <div
                 class="container-fluid container-zeroed-content hvh-80 d-flex flex-column align-items-center justify-content-center">
                 <div class="flex-item p-4 bg-offwhite" id="signup">
-                    <form method="post" id="SignUpForm">
-                        <input type="email" class="form-control bg-darkgrey text-white" name="email"
-                            placeholder="Email">
+                    <form method="post" id="signUpForm">
+                        <input type="email" class="form-control bg-darkgrey text-white" name="email" placeholder="Email">
                         <br>
-                        <input type="text" class="form-control bg-darkgrey text-white" name="username"
-                            placeholder="Username">
+                        <input type="text" class="form-control bg-darkgrey text-white" name="username" placeholder="Username">
                         <br>
-                        <input type="password" class="form-control bg-darkgrey text-white" name="password"
-                            placeholder="Password">
+                        <input type="password" class="form-control bg-darkgrey text-white" name="password" placeholder="Password">
+                        <span>Please use a password that is between 8 to 16 characters long.</span>
                         <br>
-                        <input type="password" class="form-control bg-darkgrey text-white" name="retypePassword"
-                            placeholder="Retype Password">
-                        <br>
+                        <input type="password" class="form-control bg-darkgrey text-white" name="retypePassword" placeholder="Retype Password">
+                        <span id='passError'>test</span>
                         <button type="submit" class="btn btn-dark col-12">Sign Up</button>
                     </form>
                 </div>
@@ -26,9 +23,29 @@
     </div>
 
     <script>
-        const myForm = document.getElementById('SignUpForm');
+        var username = document.getElementsByName('username')
+        var email = document.getElementsByName('email')
+        var password = document.getElementsByName('password')
+        var retypePass = document.getElementsByName('retypePassword')
+        var form = document.getElementById('signUpForm')
+        var passError = document.getElementById('passError')
 
-        myForm.addEventListener('submit', function (e) {
+        form.addEventListener('submit', (e) => {
+            if(password.length < 8){
+                passError.className = 'alert-danger mt-4 mb-5'
+                passError.innerHTML = "Your password is less than 8 characters long."
+                e.preventDefault()
+            }
+            if(password.length > 16){
+                passError.className = 'alert-danger mt-4 mb-5'
+                passError.innerHTML = "Your password is more than 16 characters long."
+                e.preventDefault()
+            }
+            if(retypePass != password){
+                passError.className = 'alert-danger mt-4 mb-5'
+                passError.innerHTML = "Your retyped password did not match your password, try again."
+                e.preventDefault()
+            }
         })
     </script>
 
