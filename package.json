@@ -18,9 +18,16 @@
   },
   "homepage": "https://github.com/JP184/writersc.git#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
     "bootstrap": "^5.0.0-beta2",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "express-flash": "^0.0.2",
+    "express-generator": "^4.16.1",
+    "express-session": "^1.17.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "pg": "^8.5.1",
     "uniq": "^1.0.1"
   },

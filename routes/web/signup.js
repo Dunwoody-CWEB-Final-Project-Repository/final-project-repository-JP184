@@ -1,22 +1,23 @@
-const express = require("express");
-const router = express.Router();
+const express = require("express")
+const router = express.Router()
 const db = require('../../db')
+const bcrypt = require('bcrypt')
+
+express.use
+
+const users = []
 
 router.get('/', (req, res) => {
     res.render('home/signup')
 })
 
 router.post('/', (req, res, next) => {
-    try{
-        db.query('SELECT ', (err, res) => {
-            if (err) {
-                return next(err)
-            }
-            console.log(res.rows[0])
-        })
-    } catch(ex){
-
-    }
+    db.query('SELECT * FROM test_table', null, (err, res) => {
+        if (err) {
+            return next(err)
+        }
+        res.send(res.rows[0])
+    })
 })
 
 module.exports = router;
