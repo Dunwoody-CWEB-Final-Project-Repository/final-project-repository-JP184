@@ -50,7 +50,7 @@ router.get("/whoareyou/roleplayer", function( req, res){
     console.log("wau/roleplayer");
     res.render("home/whoareyou/roleplayer");
 });
-// Featers
+// Features
 router.get("/features", function( req, res){
     console.log("Features");
     res.render("home/features");

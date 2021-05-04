@@ -1,0 +1,7 @@
+<% if(typeof alert != 'undefined') {%>
+    <% alert.forEach(function(error) { %>
+        <div class="alert alert-warning text-dark" role="alert">
+            <%= error.msg %>
+        </div>
+        <% }) %>
+    <% }; %>

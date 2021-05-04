@@ -95,7 +95,7 @@ body {
 
 #signup{
     background:#EDEDED;
-    height:400px;
+    height:auto;
     width:400px;
     color:black !important;
     border-radius: 1em;
@@ -118,4 +118,15 @@ footer{
 
 .btn-fw{
     width:200px;
+}
+
+.errorContainer {
+    background: #DDAAAA;
+    padding: 2px;
+    display: none;
+    margin-bottom: 10px;
+}
+
+.error {
+    color: #E03D3D;
 }

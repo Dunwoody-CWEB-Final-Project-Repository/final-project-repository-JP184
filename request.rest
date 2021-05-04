@@ -2,4 +2,4 @@ GET http://localhost:3000/signup
 
 ###
 
-POST http://localhost:3000/signup
+POST http://localhost:3000/signup HTTP/1.1
