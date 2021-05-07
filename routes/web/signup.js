@@ -1,9 +1,10 @@
 const Router = require('express-promise-router')
+const router = new Router()
 const db = require('../../db')
 const bcrypt = require('bcrypt')
 const { check, validationResult } = require('express-validator')
 
-const router = new Router()
+
 
 // Routes
 
@@ -18,6 +19,11 @@ router.post('/',
         check('username')
             .notEmpty()
             .withMessage('Please fill in your uersname.')
+            .isLength({ min: 3 })
+            .withMessage("Username must contain at least 3 or more characters.")
+            .escape()
+            .not().contains(['SELECT', 'INSERT', 'UPDATE'], {ignoreCase: true}) // Prevents SQL injection, rejects request and sends error if user attempts to have these words inside of the username.
+            .withMessage("Invalid entry, contains blacklisted words!")
             .custom(async (username, { req }) => {
                 const checkUser = await db.query("SELECT username FROM userpass WHERE username=$1", [username])
                 console.log(req.body.username);
@@ -25,18 +31,15 @@ router.post('/',
                     throw new Error('Username is used already.')
                 }
                 return true;
-            })
-            .isLength({ min: 3 })
-            .withMessage("Username must contain at least 3 or more characters.")
-            .escape()
-            .not().contains(['SELECT', 'INSERT', 'UPDATE'], {ignoreCase: true}) // Prevents SQL injection, rejects request and sends error if user attempts to have these words inside of the username.
-            .withMessage("Invalid entry, contains blacklisted words!"),
+            }),
 
         check('email')
             .notEmpty()
             .withMessage('Please fill in your email!')
             .isEmail()
             .withMessage('Email is not a valid email.')
+            .not().contains(['SELECT', 'INSERT', 'UPDATE'], {ignoreCase: true}) // Prevents SQL injection, rejects request and sends error if user attempts to have these words inside of the username.
+            .withMessage("Invalid entry, contains blacklisted words!")
             .custom(async (email, { req }) => {
                 const checkEmail = await db.query("SELECT email FROM userpass WHERE email=$1", [email])
                 if (checkEmail.rows[0] != null) {
@@ -50,7 +53,9 @@ router.post('/',
             .notEmpty()
             .withMessage('Invalid password, please fill in the password field!')
             .isLength({ min: 8 })
-            .withMessage('Your password must be at least 8 characters long.'),
+            .withMessage('Your password must be at least 8 characters long.')
+            .not().contains(['SELECT', 'INSERT', 'UPDATE'], {ignoreCase: true}) // Prevents SQL injection, rejects request and sends error if user attempts to have these words inside of the username.
+            .withMessage("Invalid entry, contains blacklisted words!"),
         check('confirmPassword')
             .custom((confirmPassword, { req }) => {
                 if (confirmPassword != req.body.password) {

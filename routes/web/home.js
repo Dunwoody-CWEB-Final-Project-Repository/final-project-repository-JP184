@@ -1,14 +1,18 @@
-const express = require("express");
-const router = express.Router();
+var express = require('express');
+var router = express.Router();
 
 //Index route
 router.get("/", function(req, res){
+    console.log(req.session.username);
+    console.log(req.session.id);
     console.log("Index to Home");
     res.render("home/home");
 });
 //Home
 router.get("/home", function(req, res){
     console.log("Home");
+    console.log(req.session.username);
+    console.log(req.session.id);
     res.render("home/home");
 });
 //About
@@ -55,5 +59,6 @@ router.get("/features", function( req, res){
     console.log("Features");
     res.render("home/features");
 });
+
 
 module.exports = router;
