@@ -31,7 +31,7 @@ app.use(session({
 
 app.use(express.static(path.join(__dirname + "/public"))); // To be able to access any files in our public folder.
 app.use("/", require("./routes/web")); // Access web routes.
-
+app.use("/dashboard", require("./routes/user")); // Access web routes.
 app.listen(app.get('port'), function () {
     console.log("Server started on port " + app.get("port"));
 }); // Dev purposes, used to listen for port and ensure server is running on specific port.

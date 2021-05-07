@@ -54,8 +54,9 @@ router.post('/',
             res.render('home/login', { alert });
         } else {
             req.session.username = req.body.username;
+            req.session.authorized = 1;
             console.log("Login successful.");
-            res.redirect('/home');
+            res.redirect('/dashboard');
         }
     });
 
