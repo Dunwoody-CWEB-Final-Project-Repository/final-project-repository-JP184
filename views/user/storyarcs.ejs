@@ -1,0 +1,22 @@
+<%- include ("../_partial/_dashheader.ejs") -%>
+    <div class="container-fluid dashboard">
+        <div class="container-fluid dashboard">
+            <div class="container-fluid landing-content">
+                <div class="row h-100 container-zeroed">
+                    <div class="col d-flex">
+                        <a href="/dashboard/createstoryarc" class="card card-link bg-dark my-3 mx-3">
+                            <div class="card-body bg-dark">
+                                <h5>Create new Article</h5>
+                            </div>
+                            <%- include ("./partial/_storyarccard.ejs") %>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src='/assets/js/storyarcs.js'></script>
+
+
+    <%- include ("../_partial/_footer.ejs") -%>

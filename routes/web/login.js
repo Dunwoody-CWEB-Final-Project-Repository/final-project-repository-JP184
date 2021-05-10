@@ -5,7 +5,13 @@ const bcrypt = require('bcrypt');
 const { check, validationResult } = require('express-validator');
 
 router.get('/', (req, res) => {
-    res.render('home/login');
+    if (req.session.authorized){
+        console.log("Dashboard");
+        res.redirect("/dashboard");
+    } else {
+        console.log("Login");
+        res.render('home/login');
+    }
 })
 
 router.post('/',
@@ -54,6 +60,7 @@ router.post('/',
             res.render('home/login', { alert });
         } else {
             req.session.username = req.body.username;
+            req.session.role = 'user';
             req.session.authorized = 1;
             console.log("Login successful.");
             res.redirect('/dashboard');

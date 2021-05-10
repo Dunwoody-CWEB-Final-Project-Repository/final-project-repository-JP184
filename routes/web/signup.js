@@ -4,7 +4,17 @@ const db = require('../../db')
 const bcrypt = require('bcrypt')
 const { check, validationResult } = require('express-validator')
 
-
+async function register(username, email, password) {
+    try {
+        const salt = await bcrypt.genSalt(10);
+        const qUsername = username;
+        const qEmail = email;
+        const qPassword = await bcrypt.hash(password, salt);
+        const registerUser = await db.query("INSERT INTO userpass (username, email, password, created_date) VALUES ($1, $2, $3, NOW())", [qUsername, qEmail, qPassword]);
+    } catch (error) {
+        console.log(error);
+    }
+}
 
 // Routes
 
@@ -78,25 +88,5 @@ router.post('/',
             res.redirect("/login");
         }
     });
-
-//Functions
-
-async function register(username, email, password) {
-    try {
-        const salt = await bcrypt.genSalt(10);
-        const qUsername = username;
-        const qEmail = email;
-        const qPassword = await bcrypt.hash(password, salt);
-        const registerUser = await db.query("INSERT INTO userpass (username, email, password, created_date) VALUES ($1, $2, $3, NOW())", [qUsername, qEmail, qPassword]);
-    } catch (error) {
-        console.log(error);
-    }
-
-    /*try {
-        
-    } catch (error) {
-        console.log(error);
-    }*/
-}
 
 module.exports = router;

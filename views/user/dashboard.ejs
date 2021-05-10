@@ -1,13 +1,30 @@
 <%- include ("../_partial/_dashheader.ejs") -%>
-<div class="container-fluid landing">
-    <div class="container-fluid landing-background">
-        <div class="container-fluid landing-content">
-            <div class="row h-100 container-zeroed">
-                <div class="col">
-                 Test
+    <div class="container-fluid dashboard">
+        <div class="container-fluid dashboard">
+            <div class="container-fluid landing-content">
+                <div class="row h-100 container-zeroed">
+                    <div class="col d-flex">
+                        <a href="dashboard/storyarcs" class="card card-link bg-dark my-3 mx-3">
+                            <div class="card-body bg-dark">
+                                <h5 class="card-title">Story Arcs</h5>
+                                <p class="card-text">A place to keep track of all of your story needs. Plotlines, characters, worlds included as well.</p>
+                            </div>
+                        </a>
+                        <a href="dashboard/worlds" class="card card-link bg-dark my-3 mx-3">
+                            <div class="card-body bg-dark">
+                                <h5 class="card-title">Worlds</h5>
+                                <p class="card-text">A place to keep track of all of your world needs. From places, culture, to who owns what.</p>
+                            </div>
+                        </a>
+                        <a href="dashboard/characters" class="card card-link bg-dark my-3 mx-3">
+                            <div class="card-body bg-dark">
+                                <h5 class="card-title">Characters</h5>
+                                <p class="card-text">A place to keep track of all of your character needs. Main characters, antags and dummies included.</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<%- include ("../_partial/_footer.ejs") -%>
+    <%- include ("../_partial/_footer.ejs") -%>

@@ -2,6 +2,7 @@ const express = require('express'); // Allows us to use express framework.
 const app = express(); // Reassigns constant var app to act as express().
 const path = require("path"); // Allows usage of path shortcuts to easily combine filepaths throughout the website.
 const bcrypt = require('bcrypt');
+
 var session = require('express-session'); // Allows the use of sessions through express framework.
 
 function genuuid(){
@@ -15,7 +16,7 @@ app.set("views", path.join(__dirname, "views")); // Where to find our views.
 app.set("view engine", "ejs"); // Sets viewengine to use EJS.
 
 app.use(express.json()); // Allows the use of json within routing framework.
-app.use(express.urlencoded({ extended: false })); // Allows access to view data sent through requests easily.
+app.use(express.urlencoded({ extended: true })); // Allows access to view data sent through requests easily.
 app.use(session({
     genid: function() {
         return uuid = genuuid();

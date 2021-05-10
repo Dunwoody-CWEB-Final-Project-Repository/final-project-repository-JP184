@@ -1,0 +1,19 @@
+<%- include ("../_partial/_dashheader.ejs") -%>
+    <div class="container-fluid dashboard">
+        <div class="container-fluid dashboard">
+            <div class="container-fluid landing-content">
+                <div class="row h-100 container-zeroed">
+                    <div class="container">
+                        <h1>New Story Arc</h1>
+                        <input type="text" name="title" placeholder="Title">
+                        <div id='editorjs' name='editorjs'></div>
+                        <button class="btn btn-dark mt-3" id="saveArticle">Save Story Arc</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
+    <script src="/assets/js/editor.js"></script>
+    <%- include ("../_partial/_footer.ejs") -%>
